@@ -34,8 +34,8 @@ const fs = require("fs");
 
 mongoose
   .connect(
-    //"mongodb+srv://aman:qwerty@123@cluster0-vinie.mongodb.net/test?retryWrites=true&w=majority",{
-    "mongodb+srv://sid:kctaneja@cluster0-pqe9f.mongodb.net/test?retryWrites=true&w=majority",
+    "mongodb+srv://aman:qwerty@123@cluster0-vinie.mongodb.net/test?retryWrites=true&w=majority",{
+    //"mongodb+srv://sid:kctaneja@cluster0-pqe9f.mongodb.net/test?retryWrites=true&w=majority",
     {
       useNewUrlParser: true
     }
