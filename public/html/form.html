@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Form</title>
+    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    
+    <!-- Main Style Css -->
+    <base href="/">
+    <link rel="stylesheet"type="text/css" href="css/form_style.css" />
+  </head>
+  <body class="form-v10">
+    <div class="page-content">
+      <div class="form-v10-content">
+        <form class="form-detail" action="#" method="post" id="myform">
+          <div class="form-left">
+            <h2>General Infomation</h2>
+            <div class="form-row">
+              <select name="title">
+                <option class="option" value="title">Title</option>
+                <option class="option" value="Mr">Mr</option>
+                <option class="option" value="Mrs">Mrs</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-1">
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  class="input-text"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="form-row form-row-2">
+                <input
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  class="input-text"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                name="college"
+                class="college"
+                id="college"
+                placeholder="College"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-right">
+            <h2>Contact Details</h2>
+            <div class="form-row">
+              <input
+                type="text"
+                name="street"
+                class="street"
+                id="street"
+                placeholder="Street + Nr"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                name="additional"
+                class="additional"
+                id="additional"
+                placeholder="Additional Information"
+              />
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-1">
+                <input
+                  type="text"
+                  name="zip"
+                  class="zip"
+                  id="zip"
+                  placeholder="Zip Code"
+                  required
+                />
+              </div>
+              <div class="form-row form-row-2">
+                <input
+                  type="text"
+                  name="state"
+                  class="state"
+                  id="state"
+                  placeholder="State"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <select id = "country" name="country">
+                <option value="country">Country</option>
+                <option value="India">India</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-1">
+                <input
+                  type="text"
+                  name="code"
+                  class="code"
+                  id="code"
+                  placeholder="Code +"
+                  required
+                />
+              </div>
+              <div class="form-row form-row-2">
+                <input
+                  type="text"
+                  name="phone"
+                  class="phone"
+                  id="phone"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row-last">
+              <input
+                type="submit"
+                name="register"
+                id = "regs"
+                class="register"
+                value="Register"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </script>
+  <script src="js/form.js"></script>
+  </body>
+</html>
