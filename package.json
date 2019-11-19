@@ -1,7 +1,7 @@
 {
-  "name": "webpack2-basics",
+  "name": "webpack-interviewbit",
   "version": "1.0.0",
-  "description": "",
+  "description": "fullstack",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "build:prod": "webpack -p"
   },
   "keywords": [],
-  "author": "Maximilian Schwarzmüller",
+  "author": "Aman Kumar",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.24.0",
@@ -33,5 +33,13 @@
     "mongoose": "^5.7.11",
     "nodemon": "^1.19.4",
     "package.json": "^2.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aman-kumar-jh/LoginForm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aman-kumar-jh/LoginForm/issues"
+  },
+  "homepage": "https://github.com/aman-kumar-jh/LoginForm#readme"
 }
