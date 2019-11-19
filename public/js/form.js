@@ -1,4 +1,4 @@
-//var userData = require('./main.js.js');
+import {data} from "public/js/signIn.js"
 
 //console.log(userData);
 
@@ -7,9 +7,15 @@ let register = document.getElementById("regs");
 
 register.addEventListener("click", e => {
   e.preventDefault();
-  let data = {
-    userDetail: register.value
+  let Data = {
+    userSecurity : data,
+    userDetail: details.value
   };
-  console.log(data);
-  window.location.href = "html/sign_in.html";
+  ajax("http://localhost:3000/addname", "POST", JSON.stringify(data))
+  .then(function(result) {
+    window.location.href = "html/sign_in.html";
+  })
+  .catch(function() {
+    console.log("failed");
+  });
 });

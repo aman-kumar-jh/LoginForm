@@ -20,11 +20,17 @@ var validators = {
   length: 8
 };
 
+exports.data = {
+  name: nameOfUser.value,
+  username: email.value,
+  password: password.value
+};
+
 function ajax(url, method, data) {
   return new Promise(function(resolve, reject) {
     var request = new XMLHttpRequest();
     request.open(method, url, true);
-    request.responseType = 'text';
+    request.responseType = "text";
     request.setRequestHeader("Content-Type", "application/json");
     request.onreadystatechange = function() {
       if (request.readyState === XMLHttpRequest.DONE) {
@@ -77,32 +83,20 @@ var keyupC = function() {
 };
 
 function checkField() {
-  if(email.value == "") return false;
-  if(nameOfUser.value == "") return false;
+  if (email.value == "") return false;
+  if (nameOfUser.value == "") return false;
   if (password.value !== repPassword.value) return false;
   return true;
 }
 
 var submitC = function(e) {
   e.preventDefault();
- 
-  var data = {
-  name: nameOfUser.value,
-  username: email.value,
-  password: password.value
-  };
+
   var validate = new Validate();
   if (validate.check()) {
     //console.log(nameOfUser.value);
     if (checkField()) {
-      ajax("http://localhost:3000/addname", "POST", JSON.stringify(data))
-        .then(function(result) {
-          window.location.href = "html/form.html";
-        })
-        .catch(function() {
-          console.log("failed");
-        });
-      //window.location.href = "html/form.html";
+      window.location.href = "html/form.html";
     } else {
       alertFault.style.display = "none";
       alertWarning.style.display = "block";
