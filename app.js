@@ -11,6 +11,12 @@ app.use(cookieParser());
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get('/', function(req, res){
+  res.
+  status(200)
+  .sendFile(path.join(__dirname + '/public/sign_up.html'));
+});
+
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(
   bodyParser.urlencoded({
@@ -34,8 +40,8 @@ const fs = require("fs");
 
 mongoose
   .connect(
-    "mongodb+srv://aman:qwerty@123@cluster0-vinie.mongodb.net/test?retryWrites=true&w=majority",{
-    //"mongodb+srv://sid:kctaneja@cluster0-pqe9f.mongodb.net/test?retryWrites=true&w=majority",
+    //"mongodb+srv://aman:qwerty@123@cluster0-vinie.mongodb.net/test?retryWrites=true&w=majority",
+    "mongodb+srv://sid:kctaneja@cluster0-pqe9f.mongodb.net/test?retryWrites=true&w=majority",
     {
       useNewUrlParser: true
     }

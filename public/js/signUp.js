@@ -2,7 +2,7 @@ var submit = document.getElementById("signup");
 var password = document.getElementById("pass");
 var repPassword = document.getElementById("re_pass");
 var email = document.getElementById("email");
-var name = document.getElementById("name");
+var nameOfUser = document.getElementById("name");
 var message = document.getElementById("mess");
 
 var alertWarning = document.getElementById("alert-warning");
@@ -10,6 +10,7 @@ var alertFault = document.getElementById("alert-fault");
 
 alertWarning.style.display = "none";
 alertFault.style.display = "none";
+message.style.display = "none";
 
 var validators = {
   lowerCaseLetters: /[a-z]/g,
@@ -75,22 +76,25 @@ var keyupC = function() {
   validate.check();
 };
 
-function checkPassword(password, repPassword) {
-  if (password.value === repPassword.value) return true;
-  return false;
+function checkField() {
+  if(email.value == "") return false;
+  if(nameOfUser.value == "") return false;
+  if (password.value !== repPassword.value) return false;
+  return true;
 }
 
 var submitC = function(e) {
   e.preventDefault();
  
   var data = {
-  name: name.value,
+  name: nameOfUser.value,
   username: email.value,
   password: password.value
   };
   var validate = new Validate();
   if (validate.check()) {
-    if (checkPassword(password, repPassword)) {
+    //console.log(nameOfUser.value);
+    if (checkField()) {
       ajax("http://localhost:3000/addname", "POST", JSON.stringify(data))
         .then(function(result) {
           window.location.href = "html/form.html";
@@ -161,7 +165,7 @@ class Validate {
       generic.addClass(len, "invalid");
       this.valid = false;
     }
-    console.log(this.valid);
+    //console.log(this.valid);
     if (this.valid) return true;
     else return false;
   }

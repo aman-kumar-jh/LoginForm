@@ -118,6 +118,7 @@ body {
   color: white;
   margin-bottom: 8px;
   font-size: medium;
+  border-radius: 1em;
 }
 
 #alert-success {background-color: #4CAF50;}
